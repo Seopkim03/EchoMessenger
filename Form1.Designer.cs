@@ -1,104 +1,44 @@
 ﻿namespace EchoMessenger
 {
-    partial class Form1
+    public partial class Form1 : Form
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        public Form1()
         {
-            if (disposing && (components != null))
+            InitializeComponent();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtboxMessage.Text) && !String.IsNullOrWhiteSpace(txtboxMessage.Text)) //텍스트박스가 비어있거나 "문자를 입력하세요"일 때는 메시지를 보내지 않도록 함
             {
-                components.Dispose();
+                string typed_msg = txtboxMessage.Text;
+                lstMessages.Items.Add(typed_msg);//입력한 메시지를 리스트박스에 추가
+                txtboxMessage.Clear();//문자를 보내면 텍스트박스 초기화
+                txtboxMessage.Select(); //텍스트박스에 커서 위치시키기
             }
-            base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
+        private void txtboxMessage_TextChanged(object sender, EventArgs e)
         {
-            label1 = new Label();
-            lstMessages = new ListBox();
-            txtboxMessage = new TextBox();
-            btnSend = new Button();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("한컴 말랑말랑 Regular", 36F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(387, 62);
-            label1.TabIndex = 0;
-            label1.Text = "Echo Messenger";
-            // 
-            // lstMessages
-            // 
-            lstMessages.Font = new Font("한컴 말랑말랑 Regular", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            lstMessages.FormattingEnabled = true;
-            lstMessages.ItemHeight = 21;
-            lstMessages.Location = new Point(22, 74);
-            lstMessages.Name = "lstMessages";
-            lstMessages.Size = new Size(750, 256);
-            lstMessages.TabIndex = 1;
-            // 
-            // txtboxMessage
-            // 
-            txtboxMessage.Font = new Font("한컴 말랑말랑 Regular", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            txtboxMessage.Location = new Point(22, 360);
-            txtboxMessage.Name = "txtboxMessage";
-            txtboxMessage.Size = new Size(650, 32);
-            txtboxMessage.TabIndex = 2;
-            txtboxMessage.Text = "문자를 입력하세요";
-            txtboxMessage.Click += txtboxMessage_Click;
-            txtboxMessage.TextChanged += txtboxMessage_TextChanged;
-            // 
-            // btnSend
-            // 
-            btnSend.BackColor = SystemColors.GradientInactiveCaption;
-            btnSend.Font = new Font("한컴 말랑말랑 Regular", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnSend.Location = new Point(681, 360);
-            btnSend.Name = "btnSend";
-            btnSend.Size = new Size(91, 32);
-            btnSend.TabIndex = 3;
-            btnSend.Text = "전송";
-            btnSend.UseVisualStyleBackColor = false;
-            btnSend.Click += btnSend_Click;
-            // 
-            // Form1
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 255, 128);
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnSend);
-            Controls.Add(txtboxMessage);
-            Controls.Add(lstMessages);
-            Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
-            ResumeLayout(false);
-            PerformLayout();
+
         }
 
-        #endregion
+        private void txtboxMessage_Click(object sender, EventArgs e)
+        {
+            txtboxMessage.Clear(); //텍스트박스를 클릭하면 "문자를 입력하세요" 사라짐
+        }
 
-        private Label label1;
-        private ListBox lstMessages;
-        private TextBox txtboxMessage;
-        private Button btnSend;
+        private void txtboxMessage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSend_Click(sender, e); //엔터키를 누르면 btnSend_Click 이벤트가 발생하도록 함
+            }
+        }
     }
 }
