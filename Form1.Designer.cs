@@ -33,6 +33,8 @@
             txtboxMessage = new TextBox();
             btnSend = new Button();
             msgCount = new Label();
+            btnDelete = new Button();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // label1
@@ -92,12 +94,39 @@
             msgCount.Text = "메세지 갯수 :";
             msgCount.TextAlign = ContentAlignment.TopCenter;
             // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.IndianRed;
+            btnDelete.Font = new Font("한컴 말랑말랑 Regular", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnDelete.ForeColor = SystemColors.Control;
+            btnDelete.Location = new Point(681, 397);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(91, 32);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "삭제";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.Firebrick;
+            btnClear.Font = new Font("한컴 말랑말랑 Regular", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnClear.ForeColor = SystemColors.Control;
+            btnClear.Location = new Point(575, 25);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(197, 43);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "대화내용 전체삭제";
+            btnClear.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 128);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
             Controls.Add(msgCount);
             Controls.Add(btnSend);
             Controls.Add(txtboxMessage);
@@ -116,5 +145,7 @@
         private TextBox txtboxMessage;
         private Button btnSend;
         private Label msgCount;
+        private Button btnDelete;
+        private Button btnClear;
     }
 }
