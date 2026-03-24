@@ -13,11 +13,20 @@
 <img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/9b53b7af-b5d8-42a2-85be-1a074655a890" />
 전송버튼을 누르면 리스트박스로 메세지전송, 기존 메세지 삭제
 <img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/922ad7fa-f44d-4edd-b6ee-4a2359ade9b7" />
+
 ## 실행 화면 (과제2)
 - 과제2 코드의 실행 스크린샷
-![과제2 실행화면](img/2-1.png)
-- 과제 내용
+![과제2 실행화면]
+- (img/2-1.png)
+텍스트 박스 입력 후 엔터키 사용 시 리스트 박스에 메세지 전송
+- (img/2-2.png)
+텍스트 박스에 아무 메세지도 없거나 공백만 있을 경우 메세지가 전송되지 않음
+
+## 실행 화면 (과제3)
 - 3단계 코드의 실행 스크린샷
+-(img/3-1.png)
+텍스트 박스에서 입력한 메세지의 시간을 표기 (타임스탬프 기능)
+## 실행	화면 (과제4)
 
 - 4단계 코드의 실행 스크린샷
 
