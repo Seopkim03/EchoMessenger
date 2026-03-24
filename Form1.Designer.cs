@@ -118,6 +118,7 @@
             btnClear.TabIndex = 6;
             btnClear.Text = "대화내용 전체삭제";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // Form1
             // 
