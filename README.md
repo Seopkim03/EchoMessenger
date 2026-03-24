@@ -3,16 +3,16 @@
 - C# 프로그래밍 학습
 - 핵심기능:
 - 화면구성: 
-## 실행 화면
+## 실행 화면 (과제1)
 - 1단계 코드의 실행 스크린샷
-<img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/5bb64c60-7465-4fca-ace4-09cced968a70" />
+-(img/1-1.png)
 초기화면
-<img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/77cd4a51-b5be-4cda-8e7b-4385a29ee1e0" />
+-(img/1-2.png)
 메세지박스를 클릭하면 "문자를 입력하세요" 사라짐
-<img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/bd4c332a-5588-432d-9f75-3a4276a2df6d" />
-<img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/9b53b7af-b5d8-42a2-85be-1a074655a890" />
+-(img/1-3.png)
+-(img/1-4.png)
 전송버튼을 누르면 리스트박스로 메세지전송, 기존 메세지 삭제
-<img width="802" height="482" alt="image" src="https://github.com/user-attachments/assets/922ad7fa-f44d-4edd-b6ee-4a2359ade9b7" />
+-(img/1-5.png)
 
 ## 실행 화면 (과제2)
 - 과제2 코드의 실행 스크린샷
@@ -26,6 +26,8 @@
 - 3단계 코드의 실행 스크린샷
 -(img/3-1.png)
 텍스트 박스에서 입력한 메세지의 시간을 표기 (타임스탬프 기능)
+-(img/3-2.png)
+텍스트 박스에서 입력한 메세지의 갯수를 하단에 표기
 ## 실행	화면 (과제4)
 
 - 4단계 코드의 실행 스크린샷

@@ -32,6 +32,7 @@
             lstMessages = new ListBox();
             txtboxMessage = new TextBox();
             btnSend = new Button();
+            msgCount = new Label();
             SuspendLayout();
             // 
             // label1
@@ -79,12 +80,25 @@
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
             // 
+            // msgCount
+            // 
+            msgCount.AutoSize = true;
+            msgCount.BorderStyle = BorderStyle.FixedSingle;
+            msgCount.Font = new Font("한컴 말랑말랑 Regular", 9.749998F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            msgCount.Location = new Point(22, 406);
+            msgCount.Name = "msgCount";
+            msgCount.Size = new Size(76, 19);
+            msgCount.TabIndex = 4;
+            msgCount.Text = "메세지 갯수 :";
+            msgCount.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 128);
             ClientSize = new Size(800, 450);
+            Controls.Add(msgCount);
             Controls.Add(btnSend);
             Controls.Add(txtboxMessage);
             Controls.Add(lstMessages);
@@ -101,5 +115,6 @@
         private ListBox lstMessages;
         private TextBox txtboxMessage;
         private Button btnSend;
+        private Label msgCount;
     }
 }

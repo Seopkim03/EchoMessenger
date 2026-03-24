@@ -21,6 +21,7 @@ namespace EchoMessenger
                 lstMessages.Items.Add($"{timeStamp} {typed_msg}");//입력한 메시지를 리스트박스에 추가, 메시지 뒤에 현재 시간을 [HH:mm:ss] 형식으로 표시
                 txtboxMessage.Clear();//문자를 보내면 텍스트박스 초기화
                 txtboxMessage.Select(); //텍스트박스에 커서 위치시키기
+                msgCount.Text = $"총 메시지 수: {lstMessages.Items.Count}"; //메시지 수를 표시하는 카운터의 숫자를 올림
             }
         }
 
