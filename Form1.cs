@@ -16,7 +16,7 @@ namespace EchoMessenger
         {
             if (!String.IsNullOrEmpty(txtboxMessage.Text) && !String.IsNullOrWhiteSpace(txtboxMessage.Text)) //텍스트박스가 비어있거나 "문자를 입력하세요"일 때는 메시지를 보내지 않도록 함
             {
-                string typed_msg = txtboxMessage.Text;
+                string typed_msg = txtboxMessage.Text.Trim(); //불필요한 공백 삭제
                 string timeStamp = DateTime.Now.ToString("[HH:mm:ss]"); //현재 시간을 가져옴
                 lstMessages.Items.Add($"{timeStamp} {typed_msg}");//입력한 메시지를 리스트박스에 추가, 메시지 뒤에 현재 시간을 [HH:mm:ss] 형식으로 표시
                 txtboxMessage.Clear();//문자를 보내면 텍스트박스 초기화
